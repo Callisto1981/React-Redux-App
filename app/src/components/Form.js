@@ -1,13 +1,13 @@
 import React from "react";
-import { card } from "./Card";
+import { Card } from "./Card";
 
 export const Form = props => {
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
-    setState();
+    //e.setState(); Submit Action
   };
-  handleChange = props => {
-    props.setState(e.target.value);
+  const handleChange = e => {
+    //setState(e.target.value); Update Action here
   };
 
   return (
@@ -15,7 +15,7 @@ export const Form = props => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            <input type="text" value={props.value} onClick={handleChange} />
+            <input type="text" value={props.value} onChange={handleChange} />
           </label>
           <button>CLICK</button>
         </div>
