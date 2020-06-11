@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const fetchCountry = () => {
+export const getCountry = () => {
   return dispatch => {
-    dispatch({ type: "FETCH_COUNTRY" });
+    dispatch({ type: "GET_COUNTRY" });
     axios
       .get(`https://restcountries.eu/rest/v2/name/${countryName}`)
       .then(res => console.log(res))
